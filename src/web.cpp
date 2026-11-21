@@ -74,7 +74,7 @@ void WEB_MAC(EthernetClient &c){
 void WEB_PAGE(EthernetClient &c, PGM_P message){                            //Sends the settings form, pre-filled with the current settings.
   WEB_P(c, PSTR("HTTP/1.1 200 OK\r\nContent-Type: text/html\r\nConnection: close\r\n\r\n"
                 "<!DOCTYPE html><html><head><meta name=\"viewport\" content=\"width=device-width\">"
-                "<title>Settings</title></head><body style=\"font-family:sans-serif\">"
+                "<title>Settings</title></head><body style=\"font-family:sans-serif;background:#777777\">"
                 "<h2>Settings</h2><p>"));
   WEB_P(c, message);
   WEB_P(c, PSTR("</p><form action=\"/save\">IP address<br><input name=\"ip\" value=\""));
